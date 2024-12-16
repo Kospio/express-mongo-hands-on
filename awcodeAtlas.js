@@ -16,13 +16,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// Connect to a MongoDB database named todolistDB with a deprecation fix for the URL parser
+// Connect to a MongoDB database named todolistDB with a deprecation fix for the URL parserqw
 //mongoose.connect("mongodb://localhost:27017/todolistDB", { useNewUrlParser: true });
 //const MONGODB_ATLAS_URI = "mongodb+srv://fjbanezares:Pepito123@cluster0.h5kauwo.mongodb.net/?retryWrites=true&w=majority"
 
 
 
-const MONGODB_ATLAS_URI = "mongodb+srv://fjbanezares:Pepito123@cluster0.n87gd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MONGODB_ATLAS_URI = "mongodb+srv://mikelcarpio97:Mikel123@cluster0.x5ycg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(MONGODB_ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
@@ -56,7 +56,7 @@ app.get("/", async (req, res) => {
         const foundItems = await Item.find({});
         // If no items found, insert the default items and redirect to the home route
         if (foundItems.length === 0) {
-            await Item.insertMany(defaultItems);
+            await Item.insertMany(defaultItems);//qowd2oijdo2indo2qwdqwdqwdqwqwduqywgdquygwduqywgdbqiuwd
             res.redirect("/");
         } else {
             // If items are found, render the 'list' EJS template with the found items

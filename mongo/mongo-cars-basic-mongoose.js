@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 // Conexión a MongoDB Atlas
 const MONGODB_ATLAS_URI =
-    "mongodb+srv://fjbanezares:Pepito123@cluster0.n87gd.mongodb.net/carDatabase?retryWrites=true&w=majority";
+    "mongodb+srv://mikelcarpio97:Mikel123@cluster0.x5ycg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(MONGODB_ATLAS_URI, {
     useNewUrlParser: true,
@@ -15,7 +15,7 @@ mongoose.connect(MONGODB_ATLAS_URI, {
 // Definir un esquema para "Cars"
 const carSchema = new mongoose.Schema({
     brand: String, // Marca del coche
-    model: String, // Modelo del coche
+    model: String, // Modelo del coche que tal estamos?  
     year: Number, // Año de fabricación
     features: [String], // Array de características
     price: Number, // Precio en USD
